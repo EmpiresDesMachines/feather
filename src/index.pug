@@ -1,0 +1,17 @@
+extends pug/layouts/layout
+
+block variables
+  - var title = 'Index page';
+  - var bodyClass = '';
+
+
+block content
+  .outer-wrapper
+    .between-page page loading
+    include pug/partials/preloader
+    include pug/partials/logo
+    include pug/partials/menu
+    .out
+      include pug/partials/cases
+      include pug/partials/scrollButtons
+

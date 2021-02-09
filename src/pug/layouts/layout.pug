@@ -1,0 +1,12 @@
+block variables
+
+include ../mixins/icon
+doctype html
+html(lang='en')
+  head
+    include head
+    //- include media-tags
+
+    body(class=bodyClass data-barba='wrapper')
+      block content
+      script(src='js/bundle.js')

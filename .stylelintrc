@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "property-no-unknown": true,
+    "string-quotes": "double",
+    "selector-attribute-quotes": "always",
+    "font-family-name-quotes": "always-where-recommended",
+  }
+}

@@ -1,0 +1,47 @@
+// Width
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+=rmin($width)
+  @media only screen and (min-width: $width+ "px")
+    @content
+
+// Height
+=rh($height)
+  @media only screen and (max-height: $height + "px")
+    @content
+
+=rhmin($height)
+  @media only screen and (min-height: $height + "px")
+    @content
+
+// Font-face
+// The 100 to 900 values roughly correspond to the following common weight names:
+// 100 Extra Light or Ultra Light
+// 200 Light or Thin
+// 300 Book or Demi
+// 400 Regular or Normal
+// 500 Medium
+// 600 Semibold or Demibold
+// 700 Bold
+// 800 Black or Extra Bold or Heavy
+// 900 Extra Black or Fat or Ultra Black
+@mixin font-face($font-family, $file-name, $weight: normal, $style: normal)
+  @font-face
+    font-family: $font-family
+    src: url("../fonts/" + $file-name + ".woff2") format("woff2"), url("../fonts/" + $file-name + ".woff") format("woff")
+    font-weight: $weight
+    font-style: $style
+//+font-face(Gotham, Gotham-light-webfont, 300)
+
+// Clearfix
+=clr
+  &::after
+    content: ""
+    display: block
+    clear: both
+
+=placeholder
+  &::placeholder
+    @content
